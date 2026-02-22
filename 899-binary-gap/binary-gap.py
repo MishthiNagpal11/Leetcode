@@ -6,9 +6,7 @@ class Solution(object):
         while n>0:
             if n%2==1:
                 if previous!=-1:
-                    gap=position-previous
-                    if gap>max_gap:
-                        max_gap=gap
+                    max_gap=max(max_gap,position-previous)
                 previous=position
             n//=2
             position+=1
